@@ -5,13 +5,17 @@
 >
 >   author : sulit - sulitsrc@163.com
 >
->   last modified : 2015-07-21 15:32
+>   last modified : 2015-07-21 18:52
 >
 >   description :
 >
 > ============================================
 
-学习文档
+koji学习文档
 ===
 
-1. [koji](src/koji/README.md)
+1. [导入本地包构建rpm包](uselocalpackage.md)(未完成)
+
+2. [使用外部仓库构建rpm包](useexternalrepo.md)
+
+3. [使用git源码构建rpm包](usegit.md)
