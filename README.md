@@ -14,4 +14,4 @@
 学习文档
 ===
 
-1. [koji](src/koji/README.md)
+1. [koji](./src/koji/README.md)
