@@ -14,4 +14,5 @@
 学习文档
 ===
 
-1. [koji](blob/master/src/koji/README.md)
+1.
+[koji](http://git.isoft.zhcn.cc/wangguofeng/docs/blob/master/src/koji/README.md)
