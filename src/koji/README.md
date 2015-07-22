@@ -22,3 +22,6 @@ koji学习文档
 
 3. [使用git源码构建rpm包
    ](http://git.isoft.zhcn.cc/wangguofeng/docs/blob/master/src/koji/usegit.md)
+
+4. [koji命令列表
+   ](http://git.isoft.zhcn.cc/wangguofeng/docs/blob/master/src/koji/kojicmdlist.md)
