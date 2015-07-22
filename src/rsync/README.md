@@ -5,16 +5,13 @@
 >
 >   author : sulit - sulitsrc@163.com
 >
->   last modified : 2015-07-21 15:32
+>   last modified : 2015-07-22 14:48
 >
 >   description :
 >
 > ============================================
 
-学习文档
+rsync同步外部仓库
 ===
 
-1.
-[koji](http://git.isoft.zhcn.cc/wangguofeng/docs/blob/master/src/koji/README.md)
-
-2.[同步外部仓库](http://git.isoft.zhcn.cc/wangguofeng/docs/blob/master/src/rsync/README.md)
+* [同步中科大fedora22 SRPMS仓库](http://git.isoft.zhcn.cc/wangguofeng/docs/blob/master/src/rsync/rsyncrepo.md)
