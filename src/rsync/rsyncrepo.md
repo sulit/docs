@@ -13,7 +13,9 @@
 同步中科院fedora22源码仓库
 ===
 
+```
 $mkdir -p myrepos/SRPMS
-rsync -avzL \
+$rsync -avzL \
 http://mirrors.ustc.edu.cn/fedora/linux/releases/22/Everything/source/SRPMS/ \
 myrepos/SRPMS/
+```

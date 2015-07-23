@@ -14,6 +14,24 @@
 koji用git服务器上的源码
 ===
 
+> 在git.isoft.zhcn.cc上的测试如下：
+
+1. 修改编译服务器/etc/kojid/kojid.conf的allowed_scms字段内容如下：
+
+`allowed_scms=git.isoft.zhcn.cc:*:no::`
+
+关于最后一个`:`，其实是这里我替换了系统默认的执行命令`make sources`，因为
+用scm默认会执行`make sources`，而我们的git上不需要多写这个Makefile文件，所以就
+用一条空指令代替，注意重启kojid，重启指令`sudo service kojid restart`。
+
+2. 客户端执行指令如下：
+
+`koji build --scratch  dist-moses \
+"git+http://git.isoft.zhcn.cc/wangguofeng/xz.git?#80d9baf99b253b29956f1cd7b2681ffab57a4863"`
+
+> 下面的是之前测试git用的，可以不用看了，若是向多了解测试过程的话，可以去看，
+> 但是感觉没有那么大的必要了。
+
 > 测试用的是外部仓库，所有操作命令如下：
 
 ```
@@ -36,7 +54,7 @@ kojiadmin$koji regen-repo dist-f22-build
 1. 有Makefile的配置
 
 源码包中必须包含以spec为后缀的文件，剩下的不是必须的，因情况而定，有的会包含
-Makefile文件，而有的不会。区别在于，kojid.conf中allow_scms选项的配置，这个选项
+Makefile文件，而有的不会。区别在于，kojid.conf中allowed_scms选项的配置，这个选项
 后面可以跟一些shell命令以逗号隔开各参数。应该注意的是这里设置值时需要做的是不
 要在域名前加任何http或者ftp之类的选项，否则在build时会报错。我的kojid.conf中
 allowed_scms配置如下：
