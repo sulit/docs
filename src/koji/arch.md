@@ -17,7 +17,7 @@ koji架构
 先附上一张原理图
 
 ![koji架构
-](http://git.isoft.zhcn.cc/wangguofeng/docs/blob/master/src/koji/pictures/kojiarch.png)
+](http://git.isoft.zhcn.cc/wangguofeng/docs/blob/master/src/koji/pictures/arch.png)
 
 1. kojihub(核心)
 

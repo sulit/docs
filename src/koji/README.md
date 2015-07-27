@@ -15,7 +15,7 @@ koji学习文档
 ===
 
 1. [导入本地包构建rpm包
-   ](http://git.isoft.zhcn.cc/wangguofeng/docs/blob/master/src/koji/uselocalpackage.md)(未完成)
+   ](http://git.isoft.zhcn.cc/wangguofeng/docs/blob/master/src/koji/uselocalpackage.md)
 
 2. [使用外部仓库构建rpm包
    ](http://git.isoft.zhcn.cc/wangguofeng/docs/blob/master/src/koji/useexternalrepo.md)
@@ -24,4 +24,12 @@ koji学习文档
    ](http://git.isoft.zhcn.cc/wangguofeng/docs/blob/master/src/koji/usegit.md)
 
 4. [koji命令列表
-   ](http://git.isoft.zhcn.cc/wangguofeng/docs/blob/master/src/koji/kojicmdlist.md)
+   ](http://git.isoft.zhcn.cc/wangguofeng/docs/blob/master/src/koji/cmdlist.md)
+
+5. [koji FAQ](http://git.isoft.zhcn.cc/wangguofeng/docs/blob/master/src/koji/usefaq.md)
+
+6. [koji架构
+   ](http://git.isoft.zhcn.cc/wangguofeng/docs/blob/master/src/koji/arch.md)
+
+7. [koji的packages、tag、target、build关系
+   ](http://git.isoft.zhcn.cc/wangguofeng/docs/blob/master/src/koji/related.md)

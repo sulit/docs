@@ -24,10 +24,19 @@ koji用git服务器上的源码
 用scm默认会执行`make sources`，而我们的git上不需要多写这个Makefile文件，所以就
 用一条空指令代替，注意重启kojid，重启指令`sudo service kojid restart`。
 
-2. 客户端执行指令如下：
+*注意*：在所请求的git项目上必须有能够完整构建一个srpm包的所有文件，当然fedora
+官方没有这个要求，他们只有两个文件，一个是spec文件，一个是source文件，巧妙之处
+在于他们在allowed_scms后面添加了一些类似于`spectool,-g,*.spec`之类的一些sh命令
+，这样，所需要的软件包就是直接从网上去下载，然后用于构建。不幸的是，我们不支持
+这样做，原因是，我们的srpm-build组中虽然有rpmdevtools这个包名，但是那只是个样
+子，我们导入到tag的包中不包含这个rpm包，而spectool这个软件恰巧在这个包中。鉴于
+这个原因，我们的git只能处理包含所有能构建src.rpm包的git项目
+
+2. 客户端执行指令如下(#后面跟得是xz项目的head，可以使短的，也可以是长的，还需
+要注意的是，项目下必须有一个能构建src.rpm包的所有文件)：
 
 `koji build --scratch  dist-moses \
-"git+http://git.isoft.zhcn.cc/wangguofeng/xz.git?#80d9baf99b253b29956f1cd7b2681ffab57a4863"`
+"git+http://git.isoft.zhcn.cc/wangguofeng/xz.git?#82e5cd2528f5a8fe8aef6e86f295e475aaf5dc22"`
 
 > 下面的是之前测试git用的，可以不用看了，若是向多了解测试过程的话，可以去看，
 > 但是感觉没有那么大的必要了。
