@@ -28,6 +28,7 @@ http://mirrors.ustc.edu.cn/centos/6/os/$arch/
 kojiadmin$ koji add-external-repo -t dist-centos6-build \
 dist-epel6-repo \
 http://mirrors.sohu.com/fedora-epel/6/$arch/
+
 kojiadmin$ koji add-target dist-centos6 dist-centos6-build
 
 kojiadmin$ koji add-group dist-centos6-build build
