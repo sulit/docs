@@ -14,6 +14,25 @@
 koji用git服务器上的源码
 ===
 
+> git处理改进
+
+  1. 先更正一个错误，关于`allowed_scms=git.isoft.zhcn.cc:*:no::`，最后一个
+  shell命令，需要注意的是这个shell命令不能使用比如-g，-h这些参数，原因是这类参
+  数会被解析为mock的参数，而不会被解析成shell命令的参数，鉴于此原因，
+  `spectool -g *.spec`这样的shell命令是不能跟在allowed_scms选项的后面，这样我
+  们就无法直接这样运行。我们可以把这条命令写进shell脚本，然后执行shell脚本就好
+  了。不过koji运行的mock chroot每次都会重建，这个无法人为去修改，我们把这个脚
+  本作成一个rpm包，加进rpm-build组中，这样就可以进行相关的操作了。我自己做的
+  rpm包是isoft-get-sources.rpm，这只是暂时性的名字，我觉得我们应该有个
+  isoft-tools rpm包，把我们自己需要的工具都加进去，包括isoft-get-sources.rpm，
+  我们随时可以往这组rpm包里加进工具，也可以改进里面的东西。另外
+  isoft-get-sources只是测试包，里面可以加进很多东西，并进行优化。
+
+  2. allowed_scms选项修改为
+
+    `allowed_scms=git.isoft.zhcn.cc:*:no:/usr/bin/isoft_get_sources`
+
+
 > 在git.isoft.zhcn.cc上的测试如下：
 
 1. 修改编译服务器/etc/kojid/kojid.conf的allowed_scms字段内容如下：
