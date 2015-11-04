@@ -106,7 +106,7 @@ koji命令总结
 
   * 启用某个编译机
 
-  `koji disable-host <hostname>`
+  `koji enable-host <hostname>`
 
   * 重命名频道
 
@@ -263,3 +263,13 @@ koji命令总结
   * 编辑一个target
 
   `koji edit-target <targetname>`
+
+  * 取消某次build
+
+  `koji cancel <build-id>`
+
+  * 命令行查看koji build logs(注意<build-id>为<build-id>+1，原因是kojira看到是
+分配给kojira的<build-id>,而这里要用到的则是分配给kojid的<build-id>,所以默认看
+的<build-id>+1才是我们要查看的，更高级操作`koji watch-logs -h`)
+
+  `koji watch-logs <build-id>`
