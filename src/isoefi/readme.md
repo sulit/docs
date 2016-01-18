@@ -87,3 +87,9 @@ menuentry '@OSNAME@' --class isoft --class gnu-linux --class gnu --class os {
 > 上面的只是初步理解，还有很多需要纠正的地方，比如grub-mkstandalone这个命令是grub-mkimage
 
 > 的增强版，但是感觉有些地方用起来还有问题。
+
+### 参考
+
+- [https://www.gnu.org/software/grub/manual/html_node/Embedded-configuration.html#Embedded-configuration](https://www.gnu.org/software/grub/manual/html_node/Embedded-configuration.html#Embedded-configuration)
+
+- [http://wiki.osdev.org/GRUB_2#Grub_for_EFI](http://wiki.osdev.org/GRUB_2#Grub_for_EFI)
