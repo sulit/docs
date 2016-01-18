@@ -19,3 +19,7 @@
 2. [同步外部仓库](http://git.isoft.zhcn.cc/wangguofeng/docs/blob/master/src/rsync/README.md)
 
 3. [isoft-update-server](http://git.isoft.zhcn.cc/wangguofeng/docs/blob/master/src/isoft-update-server/isoft-update-server.md)
+
+4. [isoefi](http://git.isoft.zhcn.cc/wangguofeng/docs/blob/master/src/isoefi/readme.md)
+
+5. [worktools](http://git.isoft.zhcn.cc/wangguofeng/docs/blob/master/src/work/tools.md)
