@@ -83,10 +83,28 @@ menuentry '@OSNAME@' --class isoft --class gnu-linux --class gnu --class os {
 
 可以成功加载，还需要改进
 
+- 这个错误已经解决了，如果把所有模块添加进EFI，会出现这个错误，原因可能
+
+跟net、ntfs、exfat模块之类的有关，具体是和哪个模块有关，我没有再做深入
+
+下面的默认配置可以正常工作
+
 
 > 上面的只是初步理解，还有很多需要纠正的地方，比如grub-mkstandalone这个命令是grub-mkimage
 
 > 的增强版，但是感觉有些地方用起来还有问题。
+
+**默认配置**
+
+下面这些模块加进去之后不会导致异常
+grub-mkimage -c grub.cfg -p /EFI/BOOT -O x86_64-efi -o BOOTX64.EFI -d /usr/lib/grub/x86_64-efi/  all_video boot btrfs cat chain configfile echo \
+        efifwsetup efinet ext2 fat font gfxmenu gfxterm gzio halt \
+        hfsplus iso9660 jpeg loadenv loopback lvm mdraid09 mdraid1x \
+        minicmd normal part_apple part_msdos part_gpt \
+        password_pbkdf2 png \
+        reboot search search_fs_uuid search_fs_file search_label \
+        serial sleep syslinuxcfg test tftp video xfs \
+ backtrace usb usbserial_common  usbserial_pl2303 usbserial_ftdi usbserial_usbdebug  linuxefi
 
 ### 参考
 
