@@ -13,7 +13,7 @@
 
 - 制作squashfs文件系统(一些参数省略了，根据需要添加参数)
 
-  1. truncate -s <fs-size> <fs-name>
+  1. truncate -s \<fs-size\> \<fs-name\>
 
   2. mkfs.ext4 <fs-name>
 
