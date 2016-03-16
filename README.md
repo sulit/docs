@@ -14,12 +14,16 @@
 学习文档
 ===
 
-1. [koji](http://git.isoft.zhcn.cc/wangguofeng/docs/blob/master/src/koji/README.md)
+* [koji](src/koji/README.md)
 
-2. [同步外部仓库](http://git.isoft.zhcn.cc/wangguofeng/docs/blob/master/src/rsync/README.md)
+* [同步外部仓库](src/rsync/README.md)
 
-3. [isoft-update-server](http://git.isoft.zhcn.cc/wangguofeng/docs/blob/master/src/isoft-update-server/isoft-update-server.md)
+* [isoft-update-server](src/isoft-update-server/README.md)
 
-4. [isoefi](http://git.isoft.zhcn.cc/wangguofeng/docs/blob/master/src/isoefi/readme.md)
+* [isoefi](src/isoefi/README.md)
 
-5. [worktools](http://git.isoft.zhcn.cc/wangguofeng/docs/blob/master/src/work/tools.md)
+* [worktools](src/work/tools.md)
+
+* [makeisoft相关](src/makeisoft/README.md)
+
+* [nginx相关](src/nginx/README.md)

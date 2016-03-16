@@ -14,4 +14,4 @@
 rsync同步外部仓库
 ===
 
-* [同步中科大fedora22 SRPMS仓库](http://git.isoft.zhcn.cc/wangguofeng/docs/blob/master/src/rsync/rsyncrepo.md)
+* [同步中科大fedora22 SRPMS仓库](rsyncrepo.md)
