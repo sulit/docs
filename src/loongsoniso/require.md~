@@ -1,0 +1,42 @@
+龙芯版本
+=======
+
+- 内核搭载2个，用3.10.84去启动livecd，安装完之后用2.6.32去启动运行
+
+  grub里面不写3.10.84启动项
+
+- 桌面变更
+
+  * 壁纸
+
+  * 左下角log
+
+  * 登录壁纸
+
+  * 登录log
+
+- 浏览器和办公软件确认（就是后期升级的几个软件）
+
+- 系统issue和\*-release变更,这个也和启动时显示的系统名称有关系
+
+- 用户自动登录和密码删除
+
+  * 自动登录用户为isoft
+
+- 存在浏览器里有龙芯默认首页的，改为普华首页
+
+- squashfs制作
+
+  * truncate -s 15G root-image.fs
+
+  * mkfs.ext3 -m 0 -F root-image.fs
+  
+  * tune2fs -c 0 -i 0 root-image.fs
+
+  * mount -o loop root-image.fs /tmp/sysroot
+
+  * cp -aT /dev/sda2 /tmp/sysroot
+
+  * umount /tmp/sysroot
+  
+  * mksquashfs root-image.fs root-iamge.sfs -noappend
