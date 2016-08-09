@@ -27,3 +27,5 @@
 * [makeisoft相关](src/makeisoft/README.md)
 
 * [nginx相关](src/nginx/README.md)
+
+* [irc] (src/irc/irc.md)
