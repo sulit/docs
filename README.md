@@ -28,4 +28,6 @@
 
 * [nginx相关](src/nginx/README.md)
 
-* [irc] (src/irc/irc.md)
+* [irc](src/irc/irc.md)
+
+* [内核](src/kernel/readme.md)

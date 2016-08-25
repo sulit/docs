@@ -120,7 +120,7 @@ koji命令总结
 
   `koji maven-build target URL`
 
-  * (不理解)
+  * 从已有的rpm包制作成系统rpm包
 
   `koji wrapper-rpm <target> <build-id|n-v-r> <URL>`
 
