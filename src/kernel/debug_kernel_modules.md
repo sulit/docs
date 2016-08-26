@@ -88,7 +88,8 @@ module_exit( mod_exit );
 MODULE_LICENSE("GPL");
 EOF
 ```
-	*
+	* 生成Makefile
+	
 ```
 cat >> Makefile <<EOF
 ifneq ($(KERNELRELEASE),)
@@ -102,11 +103,12 @@ clean:
 endif
 EOF
 ```
+
 	* `make`
 	* `cp hello.ko [改成你自己的buildroot所在的目录]/output/target/root/`
 	
 - 制作根文件系统
-	* `make`
+	* `cd [buildroot]; make`
 	
 - 在[buildroot]目录中，执行调试命令
   `qemu -kernel output/images/bzImage -hda output/images/rootfs.ext2 -append "root=/dev/sda rw" -s -S &`
@@ -136,5 +138,7 @@ EOF
 - 在gdb中可以list，break，continue等，就可以执行调试内核的命令了
 
 # 参考资料
+
 [流程图片](buildroot_reference.jpg)
+
 [相关资料网址](http://www.linux-magazine.com/Online/Features/Qemu-and-the-Kernel)
