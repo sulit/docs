@@ -103,7 +103,6 @@ clean:
 endif
 EOF
 ```
-
 	* `make`
 	* `cp hello.ko [改成你自己的buildroot所在的目录]/output/target/root/`
 	
