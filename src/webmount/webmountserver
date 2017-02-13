@@ -1,0 +1,15 @@
+#!/usr/bin/python
+
+from SimpleXMLRPCServer import SimpleXMLRPCServer
+import os
+
+def mount(enable):
+    if enable == 1:
+        os.popen("sudo mount /dev/sda5 /home")
+    return 1
+
+if __name__ == '__main__':
+    #s = SimpleXMLRPCServer(('192.168.33.17', 9099))
+    s = SimpleXMLRPCServer(('127.0.0.1', 9099))
+    s.register_function(mount)
+    s.serve_forever()

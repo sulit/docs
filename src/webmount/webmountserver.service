@@ -1,0 +1,10 @@
+[Unit]
+Description=Isoft Web mount server
+
+After=network.target
+
+[Service]
+ExecStart=/usr/sbin/webmountserver
+
+[Install]
+WantedBy=multi-user.target
