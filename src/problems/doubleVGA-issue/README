@@ -1,0 +1,22 @@
+双显卡问题
+==========
+
+- 问题描述
+
+  5.0系统在有些带有双显卡的机器上不能正常的启动
+
+- 几种workground
+
+  1. amd显卡添加内核参数radeon.modeset=0，并且把相关的显卡的内核驱动模块卸载了，然后重启sddm，例如8086-0166型号显卡
+
+  2. 降级libdrm到2.4.66版本
+
+  3. 添加内核启动参数nomodeset radeon.modeset=0
+
+- 目前排查结果如下:
+
+  fedora26 rawhide启动正常，系统相关软件包版本，kernel 4.10.0-rc8，libdrm 2.4.75，没有xorg-x11-drv-amdgpu驱动，用的xorg-x11-drv-ati驱动
+
+  isoft5.0不能正常启动，系统相关软件包版本：kernel4.9.x，libdrm 2.4.75，xorg-x11-drv-amdgpu 1.2.0。如果换用4.0的内核，同样不能正常启动。如果卸载xorg-x11-drv-amdgpu，同样不能正常启动；
+
+  isoft4.0启动正常，系统相关软件包版本：kernel 4.4.x，libdrm 2.4.66, xorg-x11-drv-amdgpu 1.1.0
