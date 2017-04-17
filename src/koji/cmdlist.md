@@ -273,3 +273,7 @@ koji命令总结
 的<build-id>+1才是我们要查看的，更高级操作`koji watch-logs -h`)
 
   `koji watch-logs <build-id>`
+
+  * 删除软件包的某次构建(记得先把包untagg)
+
+  `koji call deleteBuild pkgname-version-release-xxx`
