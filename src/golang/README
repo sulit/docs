@@ -1,0 +1,8 @@
+golang笔记
+==========
+
+- go get 错误问题
+
+  建议是用go1.11及以上版本，并设置环境变量export GOPROXY=https://goproxy.io; export GO111MODULE=on
+
+- 龙芯golang编译总结
